@@ -42,14 +42,14 @@ export default function AllBooks() {
           {filteredBooks.map((book) => (
             <div className="col-md-4 mb-3" key={book.id}>
               <div className="card h-100">
-                <div className="card-body d-flex flex-column">
+                <div className="card-body">
                   <h5 className="card-title">{book.title}</h5>
                   <h6 className="card-text mb-2">{book.author}</h6>
                   <p className="card-text">Status: {book.status}</p>
                   <div>
                     <button
                       onClick={() => toggleStatus(book.id)}
-                      className="btn btn-sm btn-secondary me-2"
+                      className="btn btn-sm btn-primary me-2"
                     >
                       Mark as {book.status === "Read" ? "Unread" : "Read"}
                     </button>
