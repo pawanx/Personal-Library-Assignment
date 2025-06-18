@@ -17,13 +17,13 @@ export default function AllBooks() {
     <div className="container">
       <h2 className="mb-4">My Library</h2>
 
-      <div className="btn-group mb-4">
+      <div className="nav nav-pills mb-4 gap-2">
         {["All", "Read", "Unread"].map((filt) => (
           <button
             key={filt}
             onClick={() => setFilter(filt)}
-            className={`btn ${
-              filter === filt ? "btn-primary" : "btn-outline-primary"
+            className={`nav-link rounded-pill ${
+              filter === filt ? "active" : ""
             }`}
           >
             {filt} Books (
