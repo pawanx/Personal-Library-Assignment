@@ -14,8 +14,6 @@ export default function AddBook() {
     e.preventDefault();
     addBook({ id: uuidv4(), title, author, status });
     setMessage("Book added successfully!");
-
-    // Optionally wait a bit before navigating
     setTimeout(() => navigate("/"), 1000);
   };
 
